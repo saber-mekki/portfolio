@@ -7,12 +7,12 @@
     "type": "git",
     "url": "git+https://github.com/creativetimofficial/argon-design-system-react.git"
   },
+  "homepage": "https://saber-mekki.github.io/portfolio",
   "author": "saber",
   "license": "",
   "bugs": {
     "url": ""
   },
-  "homepage": "",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
