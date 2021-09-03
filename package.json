@@ -1,10 +1,11 @@
 {
-  "name": "developer-portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "Software Developer Portfolio Template built with react.js bootstrap that helps you showcase your work and skills as a software developer.",
-  "private": true,
   "homepage": "https://saber-mekki.github.io/portfolio",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
     "test": "react-scripts test",
@@ -21,6 +22,7 @@
   ],
   "dependencies": {
     "@apollo/client": "^3.3.6",
+    "async": "^3.2.1",
     "axios": "^0.21.1",
     "bootstrap": "4.3.1",
     "classnames": "2.2.6",
@@ -47,6 +49,7 @@
     "@types/markerclustererplus": "2.1.33",
     "@types/react": "16.9.19",
     "eslint-plugin-flowtype": "3.13.0",
+    "gh-pages": "^3.2.3",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
     "jquery": "^3.5.1",
