@@ -7,8 +7,8 @@ import itesLogo from './assets/img/icons/common/iteslab.png'
 export const greetings = {
     "name": "Mekki saber",
     "title": "Hi all, I'm Saber",
-    "description": "A passionate Full Stack Web Developer and Mobile App Developer having an experience of building Web applications with JavaScript / Reactjs / Nodejs  and some other cool libraries and frameworks ",
-    "resumeLink": ""
+    "description": "A passionate Full Stack Web Developer having an experience of building Web applications with JavaScript / Reactjs / Nodejs  and some other cool libraries and frameworks ",
+    "resumeLink": "https://drive.google.com/file/d/109I0uqF_RO7woEJVZdq-0brc3j6a5QX6/view?usp=sharing"
 }
 
 export const openSource = {
