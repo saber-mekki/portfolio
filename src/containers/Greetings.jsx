@@ -55,7 +55,7 @@ const Greetings = () => {
                             <i className="fa fa-file" />
                           </span>
                           <span className="btn-inner--text">
-                            See My Resumsdcsde
+                            See My Resume
                           </span>
                         </Button>
                       </div>
