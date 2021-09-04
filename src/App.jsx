@@ -11,7 +11,7 @@ import Projects from './containers/Projects';
 import GithubProfile from './containers/GithubProfile'
 const App = () => {
     return ( 
-        <BrowserRouter>
+        <BrowserRouter basename={window.location.pathname || ''}>
             <Switch>
                 <Route path="/" exact render={props => (
                     <>
