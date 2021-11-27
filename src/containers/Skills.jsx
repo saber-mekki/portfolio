@@ -3,6 +3,8 @@ import React, {Fragment} from 'react';
 import { Fade } from 'react-reveal';
 import DisplayLottie from '../components/DisplayLottie'
 import webdev from '../assets/lottie/webdev.json';
+import emoji from 'react-easy-emoji';
+
 
 import {
     Container,
@@ -10,15 +12,18 @@ import {
     Col,
     UncontrolledTooltip
 } from "reactstrap";
+import { useTranslation } from "react-i18next";
 
 import { skillsSection } from "../portfolio";
 
 const Skills = () => {
+    const { t } = useTranslation();
+
     return ( 
         <Fade left duration={1000} distance="40px">
             <Container className="text-center my-5 section section-lg">
-            <h1 className="h1">{skillsSection.title}</h1>
-            <p className="lead">{skillsSection.subTitle}</p>
+            <h1 className="h1">{t(skillsSection.title)}</h1>
+            <p className="lead">{t(skillsSection.subTitle)}</p>
             <Row>
                 <Col lg="6">
                     <DisplayLottie animationData={webdev} />
@@ -45,7 +50,7 @@ const Skills = () => {
                     <div>
                         {
                             skillsSection.skills.map(skill => {
-                                return <p key={skill}>{skill}</p>
+                                return <p key={skill}>{emoji(t(skill))}</p>
                             })
                         }
                     </div>

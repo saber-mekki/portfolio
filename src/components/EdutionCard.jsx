@@ -4,11 +4,12 @@ import {
     CardBody,
     Badge
 } from "reactstrap";
-
+import { useTranslation } from "react-i18next";
 
 import { Fade } from 'react-reveal';
 
 const EdutionCard = ({education}) => {
+    const { t } = useTranslation();
     return ( 
         <Fade right duration={1000} distance="40px">
             <Card className="card-lift--hover shadow mt-4">
@@ -16,19 +17,19 @@ const EdutionCard = ({education}) => {
                     <div className="d-flex px-3">
                     <div className="pl-4">
                         <h5 className="text-info">
-                        {education.schoolName}
+                        {t(education.schoolName)}
                         </h5>
-                        <h6>{education.subHeader}</h6>
+                        <h6>{t(education.subHeader)}</h6>
                         <Badge color="info" className="mr-1">
-                        {education.duration}
+                        {t(education.duration)}
                     </Badge>
                         <p className="description mt-3">
-                            {education.desc}
+                            {t(education.desc)}
                             <ul>
                             {
                                 education.descBullets ? 
                                 education.descBullets.map((desc) => {
-                                    return <li key={desc}>{desc}</li>
+                                    return <li key={desc}>{t(desc)}</li>
                                 }) : null
                             }
                         </ul>

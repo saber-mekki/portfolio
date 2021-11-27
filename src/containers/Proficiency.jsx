@@ -8,23 +8,26 @@ import {
     Progress,
     Col
 } from "reactstrap";
+import { useTranslation } from "react-i18next";
 
 import { Fade } from 'react-reveal';
 
 import GreetingLottie from "../components/DisplayLottie";
 
 const Proficiency = () => {
+    const { t } = useTranslation();
+
     return ( 
         <Container className="section section-lg">
            <Fade bottom duration={1000} distance="40px">
             <Row>
                     <Col lg="6">
-                        <h1 className="h1">Proficiency</h1>
+                        <h1 className="h1">{t("Proficiency")}</h1>
                         {
                             SkillBars.map(skill => {
-                                return <div className="progress-info" key={skill.Stack}>
+                                return <div className="progress-info" key={t(skill.Stack)}>
                                             <div className="progress-label">
-                                            <span>{skill.Stack}</span>
+                                            <span>{t(skill.Stack)}</span>
                                             </div>
                                             <div className="progress-percentage">
                                             <span>{skill.progressPercentage}%</span>

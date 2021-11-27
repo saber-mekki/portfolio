@@ -6,8 +6,11 @@ import {
     Row,
     Col
 } from "reactstrap";
+import { useTranslation } from "react-i18next";
 
 const Edution = () => {
+    const { t } = useTranslation();
+
     return ( 
         <section className="section pb-0 bg-gradient-info my-5">
             <Container>
@@ -18,7 +21,7 @@ const Edution = () => {
                         </div>
                     </div>
                     <div className="pl-4">
-                        <h4 className="display-3 text-white">Education</h4>
+                        <h4 className="display-3 text-white">{t("Education")}</h4>
                     </div>
                 </div>
                 <Row className="row-grid align-items-center">

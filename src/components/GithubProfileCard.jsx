@@ -6,10 +6,12 @@ import {
     Row,
     Container,
 } from "reactstrap";
+import { useTranslation } from "react-i18next";
 
 import SocialLinks from "../components/SocialLinks";
 
 const GithubProfileCard = ({prof}) => {
+  const { t } = useTranslation();
     return ( 
             <Card className="section-lg bg-gradient-info shadow-lg border-0">
                 <Container className="">
@@ -20,17 +22,17 @@ const GithubProfileCard = ({prof}) => {
                     </Col>
                     <Col lg="8" className="order-lg-1">
                       <h2 className="text-white">
-                        Reach Out to me!
+                        {t("Reach Out to me!")}
                       </h2>
                       <p className="lead text-white mt-3">
-                        DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL
+                        {t("DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL")}
                       </p>
                       <p className="text-white mt-3">
-                          {prof.bio}
+                          {t(prof.bio)}
                       </p>
                       <div className="my-3 icon-shape bg-gradient-white shadow rounded text-info">
                         <i className="ni ni-pin-3 text-info mr-2" />
-                        {prof.location}
+                        {t(prof.location)}
                         </div>
                         <SocialLinks />
                     </Col>                    

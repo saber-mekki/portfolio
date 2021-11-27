@@ -11,11 +11,14 @@ import {
   Row,
   Col
 } from "reactstrap";
+import { useTranslation } from "react-i18next";
 
 import GreetingLottie from "../components/DisplayLottie";
 import SocialLinks from "components/SocialLinks";
 
 const Greetings = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
@@ -41,9 +44,9 @@ const Greetings = () => {
                   <Row>
                     <Col lg="6">
                       <h1 className="display-3 text-white">
-                        {greetings.title + " "}
+                        {t(greetings.title) + " "}
                       </h1>
-                      <p className="lead text-white">{greetings.description}</p>
+                      <p className="lead text-white">{t(greetings.description)}</p>
                       <SocialLinks />
                       <div className="btn-wrapper my-4">
                         <Button
@@ -55,7 +58,7 @@ const Greetings = () => {
                             <i className="fa fa-file" />
                           </span>
                           <span className="btn-inner--text">
-                            See My Resume
+                            {t("See My Resume")}
                           </span>
                         </Button>
                       </div>

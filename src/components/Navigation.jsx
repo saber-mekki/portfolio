@@ -14,10 +14,16 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import { useTranslation } from "react-i18next";
+
+import LanguageDropdown from "./LanguageDropdown"
 
 import './Navigation.css'
 
+
 const Navigation = () => {
+
+    const { t } = useTranslation();
     const [collapseClasses, setCollapseClasses] = useState("");
     const onExiting = () => setCollapseClasses("collapsing-out");
     
@@ -39,7 +45,7 @@ const Navigation = () => {
           >
             <Container>
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
-                <h2 className="text-white" id="nav-title">{greetings.name}</h2>
+                <h2 className="text-white" id="nav-title">{t(greetings.name)}</h2>
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar_global">
                 <span className="navbar-toggler-icon" />
@@ -55,7 +61,7 @@ const Navigation = () => {
                   <Row>
                     <Col className="collapse-brand" xs="6">
                       <Link to="/">
-                        <h3 className="text-black" id="nav-title">{greetings.name}</h3>
+                        <h3 className="text-black" id="nav-title">{t(greetings.name)}</h3>
                       </Link>
                     </Col>
                     <Col className="collapse-close" xs="6">
@@ -125,8 +131,10 @@ const Navigation = () => {
                       <span className="nav-link-inner--text d-lg-none ml-2">
                         Linkedin
                       </span>
+                    
                     </NavLink>
                   </NavItem>
+                  < LanguageDropdown />
                 </Nav>
               </UncontrolledCollapse>
             </Container>

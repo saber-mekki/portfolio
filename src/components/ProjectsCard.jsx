@@ -6,10 +6,12 @@ import {
     Col,
     Button
 } from "reactstrap";
+import { useTranslation } from "react-i18next";
 
 import { Fade } from 'react-reveal';
 
 const ProjectsCard = ({data}) => {
+    const { t } = useTranslation();
     return ( 
         <Col lg="6">
         <Fade bottom duration={1000} distance="40px">
@@ -18,10 +20,10 @@ const ProjectsCard = ({data}) => {
                 <div className="d-flex px-3">
                 <div className="pl-4">
                     <h5 className="text-info">
-                    {data.name}
+                    {t(data.name)}
                     </h5>
                     <p className="description mt-3">
-                        {data.desc}
+                        {t(data.desc)}
                     </p>
                     {
                         data.link ? 
@@ -35,7 +37,7 @@ const ProjectsCard = ({data}) => {
                                 <i className="fa fa-arrow-right mr-2" />
                             </span>
                             <span className="nav-link-inner--text ml-1">
-                                {data.link.name} 
+                                {t(data.link.name)} 
                             </span>
                         </Button> : null
                     }

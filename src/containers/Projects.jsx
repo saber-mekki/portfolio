@@ -5,10 +5,14 @@ import {
     Container,
     Row,
 } from "reactstrap";
-import ProjectsCard from "../components/ProjectsCard";
+import { useTranslation } from "react-i18next";
 import { Fade } from 'react-reveal';
 
+import ProjectsCard from "../components/ProjectsCard";
+
 const Projects = () => {
+    const { t } = useTranslation();
+
     return ( 
         <section className="section section-lg">
             <Container>
@@ -20,13 +24,13 @@ const Projects = () => {
                         </div>
                     </div>
                     <div className="pl-4">
-                        <h4 className="display-3 text-info">Projects</h4>
+                        <h4 className="display-3 text-info">{t("Projects")}</h4>
                     </div>
                 </div>
                 <Row className="row-grid align-items-center">
                     {
                         projects.map(data => {
-                            return <ProjectsCard data={data} />
+                            return <ProjectsCard data={(data)} />
                         })
                     }
                 </Row>
