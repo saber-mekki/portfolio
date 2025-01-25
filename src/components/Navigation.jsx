@@ -130,10 +130,10 @@ const Navigation = () => {
                     <i className="fa fa-linkedin" />
                       <span className="nav-link-inner--text d-lg-none ml-2">
                         Linkedin
-                      </span>
-                    
+                      </span>                   
                     </NavLink>
-                  </NavItem>
+                  </NavItem>             
+                  <Link style={{color: "white"}}to="/blog">Blog</Link>
                   < LanguageDropdown />
                 </Nav>
               </UncontrolledCollapse>

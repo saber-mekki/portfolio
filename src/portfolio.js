@@ -8,7 +8,7 @@ export const greetings = {
   description:
     "A passionate Full Stack Web Developer having an experience of building Web applications with JavaScript / Reactjs / Nodejs  and some other cool libraries and frameworks",
   resumeLink:
-    "https://drive.google.com/file/d/109I0uqF_RO7woEJVZdq-0brc3j6a5QX6/view?usp=sharing",
+    "https://drive.google.com/file/d/1jKUvkPlbZ76E-yRtjnzAXXrW8HHxnE8l/view?usp=sharing",
 };
 
 export const openSource = {
@@ -189,10 +189,25 @@ export const projects = [
   },
   {
     name: "Creation of online sales sites (Frontend & Backend)",
-    desc: "Technical environment: Angular 8, spring boot.",
+    desc: "Technical environment: Reactjs, Nodejs, Reactstrap, git, TS, JS, Trello, scrum.",
     link: {
       name: "Kathya",
       url: "www.kathya.tn",
     },
   },
+  {
+    name: "Creation of a website for pool maintenance and renovation services (Frontend & Backend)",
+    desc: "Technical environment: React.js, Node.js, Bootstrap, Git, TypeScript, JavaScript, Agile methodology.",
+    link: {
+      name: "GoPiscine",
+      url: "https://gopiscine.fr",
+    },
+  },{
+    name: "Development of a personal portfolio website (Frontend)",
+    desc: "Technical environment: React.js, Reactstrap, GitHub Pages, TypeScript, JavaScript, Responsive Design.",
+    link: {
+      name: "Saber Mekki Portfolio",
+      url: "https://saber-mekki.github.io/portfolio/",
+    },
+  }
 ];

@@ -1,0 +1,20 @@
+/* Blog.css */
+.blog-container {
+    padding: 20px;
+  }
+  
+  .blog-post {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-post h2 {
+    margin: 0 0 10px 0;
+  }
+  
+  .blog-post p {
+    margin: 0;
+  }
+  
